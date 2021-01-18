@@ -9,7 +9,9 @@ political_decisions = {
                 has_country_flag = post_colonial_country
                 exists = SGF
                 exists = GER
+                exists = GCF
                 tag = DNB
+                tag = GCF
                 AND = {
                     tag = AUS
                     NOT = { has_country_flag = austrian_greater_germany }
@@ -302,6 +304,7 @@ political_decisions = {
             NOT = {
                 has_country_flag = post_colonial_country
                 exists = GER
+                exists = GCF
                 exists = NGF
                 tag = UBD
             }
@@ -483,7 +486,7 @@ political_decisions = {
                 tag = NGF
                 tag = SGF
             }
-            NOT = { exists = GER }
+            NOT = { exists = GER exists = GCF }
         }
 
         allow = {
@@ -649,6 +652,9 @@ political_decisions = {
         potential = {
             tag = AUS
             NOT = { exists = GER }
+            NOT = { exists = GCF }
+			has_country_flag = austrian_greater_germany
+			NOT = { has_global_flag = german_confederation_austrian }
         }
 
         allow = {
@@ -694,9 +700,14 @@ political_decisions = {
             random_owned = { limit = { owner = { accepted_culture = hungarian } } owner = { remove_accepted_culture = hungarian } }
             all_core = {
                 remove_core = THIS
-                add_core = GER
+                add_core = GCF
             }
-            change_tag = GER
+			GER = {
+				all_core = {
+					remove_core = GER
+					add_core = GCF
+				}
+            change_tag = GCF
             add_accepted_culture = north_german
             set_global_flag = 3hurrahs
             any_country = {
@@ -1034,9 +1045,9 @@ political_decisions = {
                 change_province_name = "Kolmar"
             }
             409 = {
-                change_province_name = "Straﬂburg"
+                change_province_name = "Stra√üburg"
                 state_scope = {
-                    change_region_name = "Elsaﬂ-Lothringen"
+                    change_region_name = "Elsa√ü-Lothringen"
                 }
             }
             prestige = 5
@@ -1081,6 +1092,7 @@ political_decisions = {
             NOT = {
                 has_country_flag = post_colonial_country
                 exists = GER
+                exists = GCF
                 exists = NGF
                 tag = UBD
             }
@@ -1174,9 +1186,11 @@ political_decisions = {
                 has_country_flag = post_colonial_country
                 exists = SGF
                 exists = GER
+                exists = GCF
                 tag = AUS
                 tag = KUK
                 tag = DNB
+                tag = GCF
             }
             revolution_n_counterrevolution = 1
         }
