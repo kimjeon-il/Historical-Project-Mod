@@ -648,7 +648,7 @@ political_decisions = {
         news_desc_long = "form_germany_NEWS_LONG"
         news_desc_medium = "form_germany_NEWS_MEDIUM"
         news_desc_short = "form_germany_NEWS_SHORT"
-        picture = form_germany
+        picture = "german_confederation"
         potential = {
             tag = AUS
             NOT = { exists = GER }
