@@ -15,6 +15,7 @@ political_decisions = {
                 HUN = { vassal_of = AUS }
             }
             NOT = { has_global_flag = has_become_dual_monarchy }
+            NOT = { has_country_flag = austrian_greater_germany }
         }
 
         allow = {
@@ -248,7 +249,7 @@ political_decisions = {
             regular_clothes = 10
             leadership = 40
             define_general = {
-                name = "Józef Bem"
+                name = "JÃ³zef Bem"
                 personality = intelligent
                 background = natural_born_leader
             }
